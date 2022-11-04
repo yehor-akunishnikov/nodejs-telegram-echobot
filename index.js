@@ -13,7 +13,7 @@ bot.on('message', (ctx) => ctx.telegram.sendCopy(ctx.chat.id, ctx.message))
 // Start webhook via launch method (preferred)
 bot.launch({
     webhook: {
-      domain: 'https://nodejs-telegram-echobot-dzgubf.codecapsules.co.za',
+      domain: process.env.URL,
       port: process.env.PORT
     }
   })
