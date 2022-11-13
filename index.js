@@ -13,11 +13,11 @@ bot.on('message', (ctx) => ctx.telegram.sendCopy(ctx.chat.id, ctx.message))
 // Start webhook via launch method (preferred)
 bot.launch({
     webhook: {
-      domain: process.env.URL,
+      domain: 'https://nodejs-telegram-echobot-fiuxwy.codecapsules.co.za/',
       port: process.env.PORT
     }
   })
-  
+
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
